@@ -1,0 +1,971 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@900&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;400;500&display=swap');
+  
+font-xs = 0.8em
+font-s = 1.2em
+font-m = 1.6em
+font-l = 2em
+font-xl = 2.8em
+font-xxl = 3.5em
+
+fontfamletter = var(--fontfamletter)
+fontfamTitles = var(--fontfamTitles)
+
+:root {
+  --color-white: #ffffff
+  --color-black: #000000
+  --color-letter:#706d6d
+  --color-first:#4E8BBF
+  --color-second: #f16f2d
+  --color-third: #f4a46c
+  --color-fourth: #8fa4b9
+  --color-footer: #F4F4F4
+  --fontfamletter : 'Roboto', sans-serif;
+  --fontfamTitles : 'Fira Sans', sans-serif
+} 
+
+color-white = var(--color-white)
+color-black = var(--color-black)
+color-letter =var(--color-letter)
+color-first = var(--color-first)
+color-second = var(--color-second)
+color-third = var(--color-third)
+color-fourth =var(--color-fourth)
+color-footer =var(--color-footer)
+
+
+movil = 'screen and (min-width: 576px)'
+tablet = 'screen and (min-width: 769px)'
+escritorio-xs = 'screen and (min-width: 850px)'
+escritorio-s = 'screen and (min-width: 992px)'
+escritorio-m = 'screen and (min-width: 1200px)'
+escritorio-l = 'screen and (min-width: 1400px)'
+
+*
+  margin 0px
+  padding 0px
+  -webkit-box-sizing border-box!important
+  -moz-box-sizing border-box!important
+  box-sizing border-box!important
+
+vendor(prop, args)
+  -webkit-{prop} args
+  -moz-{prop} args
+  {prop} args
+
+border-radius()
+  vendor('border-radius', arguments)
+
+transform()
+  vendor('transform', arguments)  
+
+transition()
+  vendor('transition', arguments)
+
+//Colores
+
+.color-white
+  color color-white
+.color-black
+  color color-black
+.color-letter
+  color color-letter
+.color-first
+  color color-first
+.color-second
+  color color-second
+.color-third
+  color color-third
+.color-fourth
+  color color-fourth
+.color-fifth
+  color color-fifth
+
+//Letras
+
+.fontfam1
+  font-family fontfam1
+.fontfam2
+  font-family fontfam2
+
+.font-xs
+  font-size font-xs
+.font-s
+  font-size font-s
+.font-m
+  font-size font-m
+.font-l
+  font-size font-l
+.font-xl
+  font-size font-xl
+.font-xxl
+  font-size font-xxl
+
+
+//Estilos
+
+body
+  color color-letter
+  font-family fontfamletter
+  font-size font-s
+  h1
+    font-size: font-xxl
+  h2
+    font-size: font-xl
+  h3
+    font-size: font-l
+  h4
+    font-size: font-m
+  h5
+    font-size: font-s
+  h6
+    font-size: font-s
+  p
+    font-size: font-s
+  a 
+    text-decoration: none
+    color color-letter
+
+.container
+  max-width 1600px
+  margin auto
+
+.content 
+  max-width 1280px
+  margin auto
+  padding: 0px 10px
+  @media tablet
+    padding: 0px 20px
+
+// floating button
+.float
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:50%;
+	right:20px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+
+.float
+  z-index 100
+  font-size: 29px
+
+.my-float
+	margin-top:16px;
+
+/////////////////////////////////////////////////////
+///////////////HOME - BANNER SLIDER /////////////////
+/////////////////////////////////////////////////////
+
+.banner-slider
+  width: 100%
+  height: 90vh
+  z-index 2
+  @media tablet
+    height: 85vh
+  @media escritorio-s
+    height: 80vh
+  @media screen and ( min-height: 920px )
+    height: 90vh
+.bx-wrapper
+  border: initial; /* para eliminar el borde que trae por defecto */
+  width: 100% !important
+  height: 100% !important /* para ocupar todo el div */
+
+  // Buttons pager inactive
+.bx-wrapper .bx-pager.bx-default-pager a 
+  background: rgba(255, 255, 255, 0.4)
+  transform scale(0.7)
+  transition 0.5s
+
+  // Buttons pager - active
+.bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus
+  background color-white
+  transform scale(1)
+
+// Buttons pager - position
+.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto 
+    bottom: 15px !important;
+.bx-wrapper .bx-next,.bx-wrapper .bx-prev
+  filter: brightness(200%)
+// Buttons prev - next Slider
+.bx-wrapper .bx-controls-direction a
+:root
+  --main-color: color-first;
+
+.bxslider
+  width: 100% 
+  height: 90vh  
+  @media tablet
+    height: 85vh
+  @media escritorio-s
+    height: 80vh
+  @media screen and ( min-height: 920px )
+    height: 90vh
+
+  .slide-item
+    position: relative;
+    width: 100% 
+    height: 100%
+    display: block
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+/////////////////////////////////////////////////////
+/////////////////HOME - PRODUCTOS ///////////////////
+/////////////////////////////////////////////////////
+
+.product  /* product section */
+  width: 100%
+  height: 100%
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  padding: 120px 20px 50px
+
+  .product_title
+    width: 100%
+    text-align: left
+    h2
+      color color-first
+      font-family: fontfamTitles
+      font-size: font-xl
+
+  .product-container   /* product gallery */
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 1.5rem;
+    row-gap: 1.5rem;
+    width 100%
+    padding: 20px 0px
+
+    @media (min-width: 600px) 
+      grid-template-columns: repeat(2, 1fr);
+      
+
+    .right-card
+      flex-direction: reverse
+      @media (min-width: 600px) 
+        flex-direction: row-reverse
+
+      .card__triangle
+        transform rotate(360deg)
+        @media (min-width: 600px) 
+          transform rotate(180deg)
+
+    .first-color
+      .card__triangle
+        border-left: 25px solid color-first !important;
+      .card__icon
+        background: color-first !important
+      .card__text 
+        background: color-first !important
+
+    .card /* product card */
+      display: flex
+      width 100%;
+      height: 120px
+      position: relative
+      z-index 2
+      .card__icon
+        padding: 10px 15px
+        min-width: 110px 
+        max-width: 110px 
+        height: 100%
+        background: color-second
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        position: relative
+        img
+          padding: 10px 5px 0px
+          width: 100%
+          height: auto
+        .title
+          text-align: center
+          color color-white
+          font-size: font-xs
+          width: 100%
+          padding: 5px 0px 0px
+          height: auto
+          text-transform uppercase
+          
+      .card__text 
+        width: 0%
+        flex-direction: column
+        background: color-second
+        color color-white
+        font-family: fontfamletter
+        display -webkit-box
+        -webkit-line-clamp 5
+        line-height  1.4
+        -webkit-box-orient vertical
+        overflow hidden
+        text-overflow ellipsis
+        transition width 1s
+        transition 1s
+        padding: 8px 0px
+
+        h2
+          font-size: font-s
+        p 
+          opacity: 0
+          font-size: font-xs
+          transition: 2s
+
+      .card__triangle
+        width: 25px
+        height: 100%
+        display: block
+        border-left: 25px solid color-second;
+        border-top: 60px solid transparent;
+        border-bottom: 60px solid transparent; 
+
+      .card__image
+        position: absolute
+        top 50%
+        left: 50%
+        transform translate(-50%,-50%)
+        width: 100%
+        height: 100%
+        z-index: -1
+        img
+          width: 100%
+          height: 100%
+          object-fit: cover
+
+    .card:hover .card__text 
+      width 60%
+      padding: 8px 10px
+      p
+        opacity: 1
+
+
+/////////////////////////////////////////////////////
+///////////////HOME - BRAND SLIDER /////////////////
+/////////////////////////////////////////////////////
+
+animationSpeed = var(--times) ;
+
+.banner-brand-slider
+  width: 100%
+  height: 100%
+  padding: 50px 0px
+
+// Animation full screen
+@keyframes scroll 
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-250px * var(--cant)))}
+// Animation media tablet
+@keyframes scrollm 
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-190px *  var(--cant)))}
+
+
+// Styling
+.slider-brands
+	background white
+	height 100px
+	margin auto
+	overflow:hidden
+	position: relative
+	max-width 960px
+  display: flex
+  justify-content: center
+  align-items: center
+	
+	&::before,
+	&::after 
+		background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+		content: "";
+		height: 100px;
+		position: absolute;
+		width: 100px;
+		z-index: 2;
+	
+	
+	&::after 
+		right: 0;
+		top: 0;
+		transform: rotateZ(180deg);
+	
+
+	&::before 
+		left: 0;
+		top: 0;
+	
+	
+	.slide-track 
+		animation: scrollm animationSpeed linear infinite;
+		display: flex;
+		width: calc(190px * 2 * var(--cant));
+	
+	
+	.slide 
+		height: 80px;
+		width: 190px;
+  .image
+    width: 100%
+    height: 100%
+    object-fit: cover
+    margin auto
+
+.slider-brands
+  display: flex
+  align-items:  center
+  @media tablet
+    max-width: 960px
+    &::before,
+	  &::after 
+      width: 200px;
+    .slide-track 
+      animation: scroll animationSpeed linear infinite;
+      width: calc(250px * 2 * var(--cant));
+    .slide 
+      height: 100px;
+      width: 250px;
+
+/////////////////////////////////////////////////////
+///////////////HOME - WHATSAPP BUTTON ///////////////
+/////////////////////////////////////////////////////
+
+.contact-button
+  width: 100%
+  margin auto
+  height: 100%
+  display: flex
+  justify-content: center
+  padding: 120px 0px
+  align-items: center
+  flex-direction: column
+  @media movil
+    padding: 120px 10px
+    width: 90%
+    flex-direction: row
+  .right-section
+    width: 100%
+    padding: 0px 10px
+    height: 100%
+    img
+      width: 100%
+      height: auto
+      object-fit: cover
+      transform scale(1.1)
+    @media tablet
+     width: 50% 
+     padding: 0px 20px
+  .left-section
+    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    text-align: center
+    padding: 0px 10px
+    margin-bottom: 50px
+    @media tablet
+      margin-bottom: 0px
+      width: 50%
+      padding: 0px 20px
+    .left-section__text
+      width:100%
+      font-family: fontfamletter
+      font-weight: 100
+      @media tablet
+        width:70%
+      h2
+        font-size: font-xxl
+        color color-first
+        font-family: fontfamTitles
+        margin-bottom: 10px
+      p
+        font-size: font-s
+        margin-bottom: 40px
+
+    .left-section__button
+      padding: 10px 20px
+      display: flex
+      text-align: center
+      color white
+      text-decoration: none
+      justify-content: center
+      align-items: center
+      font-weight: 500
+      font-family: fontfamTitles
+      background: color-second
+      border-radius 10px
+      font-size: font-l
+      gap 12px
+
+
+/////////////////////////////////////////////////////
+//////////////////////CONTACTO///////////////////////
+/////////////////////////////////////////////////////
+
+.banner-page
+  height: 50vh
+  width 100%
+
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.contact-content 
+  width: 100%
+  height: 100%
+  display: flex
+  justify-content: center
+  align-items: flex-start
+  flex-wrap: wrap-reverse
+  background: rgb(255, 255, 255)
+  padding: 20px 10px 120px
+  @media tablet
+    flex-wrap: wrap
+
+  .contact-aside
+    width: 80%
+    height: 100%
+    padding: 30px 10px
+    margin: 40px 0px
+    .fa-solid
+      font-size: font-l
+    @media movil
+      padding: 0px 10px
+      width: 50%  
+
+    @media escritorio-s
+      margin: 0px
+      width: 30%
+
+    .contact-advisor
+      width: 100%
+      height: 100%
+      background: color-white
+      border-radius 12px
+      display: flex
+      flex-direction: column
+      margin 10px 0px
+      padding: 20px 25px
+      -webkit-box-shadow: 0px 0px 18px 4px rgb(231, 231, 231);
+      -moz-box-shadow: 0px 0px 18px 4px rgb(231, 231, 231);
+      box-shadow: 0px 0px 18px 4px rgb(231, 231, 231);
+      
+      .title
+        font-family: fontfamletter
+        width: 100%
+        margin-bottom: 10px
+        font-size: font-xs
+        font-weight: 700
+      .advisor-info 
+        width: 100%
+        height: 100%
+        display: flex
+        align-items: center
+        gap: 10px
+        .fa-solid
+          color color-second
+          font-size: font-s
+        .phone 
+          font-size: font-s
+          a
+            color color-first
+            font-family: fontfamTitles
+
+  .contact__form
+    width: 95%
+    height: auto
+    display: flex
+    justify-content: center
+    align-items: center
+    @media movil
+      width: 80%
+    @media escritorio-s
+      width: 60%
+    
+    .box__form
+      text-align: center
+      display: flex
+      flex-direction: column
+      width: 95%
+      height: 95%
+      margin auto
+      padding: 80px
+      -webkit-box-shadow: 0px 0px 18px 4px rgb(231, 231, 231);
+      -moz-box-shadow: 0px 0px 18px 4px rgb(231, 231, 231);
+      box-shadow: 0px 0px 18px 4px rgb(231, 231, 231);
+      padding 20px 20px 80px 20px
+      border-radius 25px
+      h2
+        font-size: 30px
+        color color-first
+        margin: 20px 0px
+        font-family: fontfamTitles
+          
+      form
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: space-between
+        #msg
+          height: 250px
+        .full,.doble
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: 50px;
+        .doble
+          width: 100%;
+          @media movil
+            width: 45%;
+        .button
+          font-size: font-l
+          border none
+          background-color: color-first
+          border: none;
+          color: white;
+          padding: 10px 20px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 18px 10px;
+          border-radius 10px
+          cursor: pointer;
+
+/////////////////////////////////////////////////////
+///////////////////CONTACT - MAP/////////////////////
+/////////////////////////////////////////////////////
+
+.map
+  width: 100%
+  padding: 0px 20px 100px
+  iframe
+    width: 100%
+    border-radius 18px
+    height: 400px
+
+/////////////////////////////////////////////////////
+//////////////////////ABOUT US///////////////////////
+/////////////////////////////////////////////////////
+
+.page
+  padding: 70px 20px
+  display: flex
+  flex-direction: column
+  @media tablet
+    padding 70px 70px 
+  h1
+    color color-second
+    margin-bottom: 40px
+    font-size: font-xl
+  h2
+    color color-first
+    font-size font-l
+    margin 30px 0px
+  width: 100%
+  height: 100%
+  img
+    width: 95%
+    height: auto
+    object-fit: cover
+    margin 40px auto 40px
+    @media tablet
+      width: 85%
+    @media escritorio-xs
+      width: 80%
+  p 
+    color color-letter
+    margin-bottom: 20px
+  a 
+    text-decoration: none
+    font-size: font-s
+    color color-first
+  ul 
+    width: 100%
+    li
+      list-style: none
+      margin-left 20px
+      display: flex
+      p
+        color color-letter
+        text-decoration: none
+        margin-bottom: 0px
+    li::before
+      content "\2022"
+      color color-first
+      font-weight bold
+      display inline-block
+      width 1em
+      margin-left -1em
+  .mapsite
+    margin 20px 0px
+    li
+      margin-left: 20px
+      list-style: none
+      color: color-letter
+    li::before
+      content: ""
+
+    // sección de valores
+.values,.principles
+  display: flex
+  justify-content: center
+  flex-direction: column
+  align-items: center
+  padding: 70px 0px 0px
+  .values-title,.principles-title
+    width: 100%
+    text-align: center
+    padding: 50px 0px 20px
+    margin-bottom: 20px
+    h3
+      color color-first
+  .cards-values,.cards-principles 
+    display: flex;
+    width: 100%
+    margin: 0 auto;
+    padding: 0 20px;
+    justify-content: space-between
+    .card 
+      border-radius 15px
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      width: 30%
+      margin-bottom: 20px;
+      display flex
+      justify-content: flex-start
+      flex-direction: column
+      align-items: center
+      padding: 30px 20px
+      img
+        margin 0 auto
+        width: auto
+        height: 78px
+        object-fit: cover
+      h3
+        font-size: 18px;
+        margin: 10px 0;
+        padding: 0 10px;
+        color color-second
+
+      p
+        text-align: justify
+        font-size: 14px;
+        color: #777;
+        margin: 0 10px 10px;
+        padding: 0;
+  
+  .cards-principles 
+    .card
+      width: 32%
+      background-color color-first
+      border-radius 4px
+      .img,h3,p
+        color color-white
+
+
+/////////////////////////////////////////////////////
+////////////////////////BLOG/////////////////////////
+/////////////////////////////////////////////////////
+
+.blog 
+  max-width: 1200
+  margin: auto
+  display: flex
+  padding: 50px 0px
+  flex-direction: row-reverse 
+  justify-content: space-around
+  
+  .blogs
+    display: flex
+    justify-content: center
+    align-items: left
+    gap 10px
+    width: 70%
+    flex-direction: column
+    -webkit-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.1);
+    padding: 20px
+    border-radius 10px
+    //- Blog content - cards
+    h1
+      color color-first
+      font-family: fontfamTitles
+      font-weight: 500
+    hr
+      width: 80%
+      margin auto
+      margin-bottom: 15px
+      border: 0.2px solid rgb(225, 225, 255)
+    .card-blog
+      display: flex
+      flex-direction: column
+      justify-content: left
+      align-items: left
+      width: 100%
+      height: 100%
+      padding: 10px 10px 
+      margin-top: 15px
+      @media tablet
+        padding: 10px 30px
+      @media escritorio-s
+        padding: 10px 50px
+      .image
+        margin auto
+        width: 100%
+        height: 250px
+        @media tablet
+          width: 90%
+        @media escritorio-s
+          width: 80%
+        img
+          width: 100%
+          height: 100%
+          object-fit: cover
+          border-radius: 18px
+      .info,.content
+        display: flex
+        justify-content: left
+        gap 5px
+        padding: 10px 10px
+        width: 100%
+        margin auto
+        @media movil
+          padding: 10px 15px
+        @media tablet
+          width: 90%
+          padding: 10px 20px
+        @media escritorio-s
+          padding: 5px 35px
+          width: 80%
+        hr
+          width: 10%
+          border 0.5px solid color-second
+          margin-bottom: 5px
+          margin-left: 0
+          @media tablet
+            width: 12%
+          @media escritorio-s
+            width: 10%
+            
+        .fa-solid
+          color color-second
+          font-size: font-xs
+        a 
+          font-size: font-xs
+          color color-black
+      .info
+        align-items: center
+        a
+          color color-first
+
+      .content
+        flex-direction: column
+        .content-title,.content-text
+          color color-first
+          font-size: font-m
+        .content-text
+          margin auto
+          color color-black
+          font-size: font-s
+          
+          
+  .sidebar
+    -webkit-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.1);
+    border-radius 10px
+    width: 25%
+    display: flex
+    flex-direction: column
+    .cat-tag
+      width: 100%
+      height: fit-content
+      margin-bottom: 30px
+      padding: 10px 10px
+      @media tablet
+        padding: 10px 30px
+      @media escritorio-s
+        padding: 10px 50px
+      ul
+        li
+          list-style: none
+          padding: 10px 0px
+          a
+            color color-black
+        li::before
+          content: "-"
+          font-size: 110%
+          font-weight: 900
+          margin-right: 5px
+          color color-black
+        li:hover a
+          color color-first
+        li:hover::before
+          color color-first
+      h3 
+        color color-second
+        margin-bottom: 10px
+      
+
+
+/////////////////////////////////////////////////////
+/////////////////////// TAG /////////////////////////
+/////////////////////////////////////////////////////
+
+.container-tag
+  width: 100%
+  height: 100%
+  .tag-list
+    max-width: 965px
+    margin auto
+    min-height: 50vh
+    padding: 30px
+    display: flex
+    justify-content: center
+    align-items: center
+    .tags
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      img
+        width 100%
+        height: auto
+      p
+        text-align: center
+        font-weight: 700
+      h2 
+        margin 70px
+        color color-first
+      ul
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        width: 100%
+        gap 10px
+        margin-bottom: 40px
+        li  
+          list-style: none
+          padding: 10px 20px
+          background: color-second
+          border-radius 4px
+          a
+            color color-white
+
+
+
+@import 'header.styl'
+@import 'footer.styl'

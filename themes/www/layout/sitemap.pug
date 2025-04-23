@@ -1,0 +1,44 @@
+extends includes/layout
+
+block body-header
+  include includes/header
+
+block body-main
+  .container 
+    .banner-page 
+      img(src="https://scontent.fclo3-2.fna.fbcdn.net/v/t39.30808-6/302195054_957086098556536_5615291839428113260_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=e3f864&_nc_eui2=AeEZR5Pje99G4r0wxI44i03UJAaTxKKO8R8kBpPEoo7xHzmO7_IbmmlETUrOaRNa1tvYds9W5FD3yi457fteHyvs&_nc_ohc=CJK_wOXstWIAX8E47bC&_nc_ht=scontent.fclo3-2.fna&oh=00_AfAsbnwPiOMqGxVSi7tL9TnTXcZ7du72q-Tlw5ijuUGrLw&oe=639B872F" alt="" srcset="")
+    .content 
+      .page
+        h1 Mapa del sitio 
+        a(href="/")
+          h5 Home
+        .mapsite
+          li
+            p Nuestros servicios
+          li
+            p Marcas Aliadas
+
+        a(href="/")
+          h5 Quiénes somos 
+        .mapsite
+          li
+            p Historia
+          li
+            p Misión
+          li
+            p Visión 
+
+
+        a(href="/")
+          h5 Portal de servicios
+        .mapsite
+          li
+            p ¿Qué es?
+          li
+            p ¿Cómo funciona?
+
+
+
+
+block body-footer
+  include includes/footer

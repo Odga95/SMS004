@@ -1,0 +1,139 @@
+extends includes/layout
+
+block body-header
+  include includes/header
+
+block body-main
+
+
+  .container
+
+    //- banner slider with images
+    .banner-slider 
+      ul.bxslider
+        li.slide-item
+          img(src="https://i.ytimg.com/vi/RQwaVpCZkMc/maxresdefault.jpg" style="width:100%;height:100%;object-fit: cover;" alt="")
+        li.slide-item
+          img(src="https://www.mercatsaunclic.barcelona/Files/Images/PPAs/2017/04/a4d0bfc5-5cd2-48f2-b1c3-eb839a7d6623/5b7bed30-e91d-4c44-b634-778f154a892a.png" style="width:100%;height:100%;object-fit: cover;" alt="")     
+        li.slide-item
+          img(src="https://imagenes.elpais.com/resizer/IMbO9tZZB-dgnWp8FWvHgz_siPg=/1200x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/H6AXL7TDVBHN3HJGBBHC54EMR4.jpg" style="width:100%;height:100%;object-fit: cover;" alt="")
+    .content
+      //- product section
+      .product
+        .product_title
+          h2 CATEGORÍAS
+        //- product gallery
+        .product-container
+          //- product card
+          a.card(href="#")
+            .card__icon
+              img(src="./img/icons/papeleria.png" alt="")
+              .title papelería
+            .card__text
+              p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita tempora nam, quam, nemo possimus sunt accusamus mollitia deleniti ex, a doloribus sapiente voluptas molestias facilis tempore voluptate quidem aperiam error!
+            .card__triangle
+            .card__image
+              img(src="https://www.elpunto.com.co/wp-content/uploads/2020/08/papeleria.jpg" alt="" srcset="")
+
+          a.card.first-color(href="#")
+            .card__icon
+              img(src="./img/icons/botiquin.png" alt="")
+              .title Botiquín
+            .card__text
+              p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita tempora nam, quam, nemo possimus sunt accusamus mollitia deleniti ex, a doloribus sapiente voluptas molestias facilis tempore voluptate quidem aperiam error!
+            .card__triangle
+            .card__image
+              img(src="https://www.intelligentpharma.com/wp-content/uploads/2020/10/botiquin-de-primeros-auxilios.jpg" alt="" srcset="")
+
+          a.card.right-card.first-color(href="#")
+            .card__icon
+              img(src="./img/icons/pulverizador.png" alt="")
+              .title ASEO
+            .card__text
+              p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita tempora nam, quam, nemo possimus sunt accusamus mollitia deleniti ex, a doloribus sapiente voluptas molestias facilis tempore voluptate quidem aperiam error!
+            .card__triangle
+            .card__image
+              img(src="https://www.elpunto.com.co/wp-content/uploads/2020/08/papeleria.jpg" alt="" srcset="")
+          a.card.right-card(href="#")
+            .card__icon
+              img(src="./img/icons/obrero.png" alt="")
+              .title EPP
+            .card__text
+              p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita tempora nam, quam, nemo possimus sunt accusamus mollitia deleniti ex, a doloribus sapiente voluptas molestias facilis tempore voluptate quidem aperiam error!
+            .card__triangle
+            .card__image
+              img(src="https://www.elpunto.com.co/wp-content/uploads/2020/08/papeleria.jpg" alt="" srcset="")
+
+          a.card(href="#")
+            .card__icon
+              img(src="./img/icons/cafe.png" alt="")
+              .title CAFETERÍA
+            .card__text
+              p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita tempora nam, quam, nemo possimus sunt accusamus mollitia deleniti ex, a doloribus sapiente voluptas molestias facilis tempore voluptate quidem aperiam error!
+            .card__triangle
+            .card__image
+              img(src="https://www.elpunto.com.co/wp-content/uploads/2020/08/papeleria.jpg" alt="" srcset="")
+
+          a.card.first-color(href="#")
+            .card__icon
+              img(src="./img/icons/computadora.png" alt="")
+              .title TECNOLOGÍA
+            .card__text
+              p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita tempora nam, quam, nemo possimus sunt accusamus mollitia deleniti ex, a doloribus sapiente voluptas molestias facilis tempore voluptate quidem aperiam error!
+            .card__triangle
+            .card__image
+              img(src="https://www.elpunto.com.co/wp-content/uploads/2020/08/papeleria.jpg" alt="" srcset="")
+
+      .banner-brand-slider 
+        .slider-brands
+          - var cantidad = 8
+          - var time = cantidad * 5
+          .slide-track(style='--cant:'+ cantidad+'; --times:'+time+'s')
+            .slide
+              img.image(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="")
+            .slide
+              img.image(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="")
+            .slide
+              img.image(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="")
+            .slide
+              img.image(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="")
+            .slide
+              img.image(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="")
+            .slide
+              img.image(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="")
+            .slide
+              img.image(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="")
+            .slide
+              img.image(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="")
+            
+            .slide
+              img.image(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="")
+            .slide
+              img.image(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="")
+            .slide
+              img.image(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="")
+            .slide
+              img.image(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="")
+            .slide
+              img.image(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="")
+            .slide
+              img.image(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="")
+            .slide
+              img.image(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="")
+            .slide
+              img.image(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="")
+      //- whatssapp contact section
+      .contact-button
+        .left-section
+          .left-section__text
+            h2 Contacta a un asesor ahora!
+            p Lorem ipsum dolor sit amet consectetur quis possimus perferendis quae rerum, doloribus facilis corporis.
+          a.left-section__button(href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202.") 
+            .fa-brands.fa-whatsapp 
+            span  Contáctanos
+        .right-section
+          img(src="/img/blue_mobile.svg", alt="")
+        
+  
+block body-footer
+  include includes/footer

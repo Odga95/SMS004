@@ -1,0 +1,50 @@
+extends includes/layout
+
+block body-header
+  include includes/header
+
+block body-main
+  .container
+    .banner-page
+      img(src="https://img77.uenicdn.com/image/upload/v1581386459/category/shutterstock_402168577.jpg", alt="", srcset="")
+    .content
+      .contact-content 
+        .contact-aside
+          .contact-advisor
+            .title
+              p David Burbano
+            .advisor-info 
+              .fa-solid.fa-location-dot
+              .phone 
+                a(href="tel:+56 316 817 3053") +56 316 817 3053
+          .contact-advisor
+            .title
+              p David Burbano
+            .advisor-info 
+              .fa-solid.fa-phone
+              .phone 
+                a(href="tel:+56 316 817 3053") +56 316 817 3053
+          .contact-advisor
+            .title
+              p David Burbano
+            .advisor-info 
+              .fa-solid.fa-envelope
+              .phone 
+                a(href="tel:+56 316 817 3053") +56 316 817 3053
+
+        .contact__form
+          .box__form
+            h2 Dejanos un mensaje y te contactaremos
+            form(id='contactForm' name='contactForm').form
+              input#name.full(type='text' placeholder='Nombre' name='name' title='nombre', required)
+              input#email.doble(type='email' placeholder='Email' name='email' title='email' required)
+              input#tel.form-control.doble(type='text' placeholder='Teléfono' name='tel' title='telefono')
+              textarea#msg.full(type='text' placeholder='Mensaje' name='msg' title='mensaje')
+              input#bpriva.button(type='submit' value="Enviar")
+      .map
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6507.468877565194!2d-76.54341099962828!3d3.4121850479333053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a6af05707fc1%3A0xd083a753c7398fb8!2sCentro%20Comercial%20Palmetto%20Plaza!5e0!3m2!1ses-419!2sco!4v1670867471614!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"  referrerpolicy="no-referrer-when-downgrade"></iframe>
+      
+block body-footer
+  include includes/footer
+  
+  script(src='/js/contact.js')

@@ -1,0 +1,158 @@
+footer
+  width: 100%
+  height fit-content
+  background: color-footer
+  font-size: font-s
+  .footer-content 
+    max-width: 1280
+    margin: auto
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    align-items: flex-start
+    color color-black
+    gap 5px
+    height fit-content
+    padding: 50px 20px 20px
+    hr
+      border: 1px solid color-second;
+      height: 100%
+      display: flex
+      margin: 20px
+      width 100%
+      height: 100%
+      @media escritorio-s
+        display: none
+    @media tablet
+      padding: 50px 90px 20px
+      justify-content: left
+    @media escritorio-s
+      justify-content: center
+    .info,.contacto,.socialnetworks
+      display: block
+      width:50% 
+      height: 100%
+      @media escritorio-s
+        margin-bottom: 0px
+        width:20%
+        text-align: left
+      .logo
+        width: 80%
+        height: auto
+        margin auto
+        margin-top: 20px
+        margin-bottom: 20px
+        @media escritorio-s
+          width: 80%
+          margin 0
+          margin-top: 0px
+          margin-bottom: 10px
+        img
+          width: 100%
+          height: 100%
+      .text
+        width: 100%
+        height: 100%
+        text-align: left
+        font-weight: 100
+        font-size: font-xs
+
+    .contacto,.socialnetworks,.info
+      .title 
+        font-weight: 500
+        font-size: font-xs
+        font-family: fontfamTitles
+        letter-spacing: 0.5px
+        margin-bottom: 20px
+        font-weight: 500
+      .contact 
+        width: 100%
+        height: 100%
+        .contact-item 
+          width: 100%
+          display: flex
+          flex-direction: row
+          justify-content: left
+          align-items: center
+          gap: 10px
+          margin-bottom: 10px
+          a 
+            text-decoration: none
+            color color-black
+            font-size: font-xs
+          .fa-solid
+            color color-second
+            font-size: 25px
+
+    .info
+      width: 80%
+      margin auto
+      margin-top: 0
+      @media escritorio-s
+        width: 30%  
+    .contacto 
+      width: 80%
+      margin auto
+      margin-top: 0
+      @media escritorio-s
+        width: fit-content
+    .socialnetworks
+      width: 80%
+      margin auto
+      margin-top: 0
+      @media escritorio-s
+        width: fit-content
+      .logos 
+        ul
+          width: 280px
+          display: flex
+          @media tablet
+            width: auto
+          li 
+            list-style: none
+            a
+              display: block
+              padding: 5px
+              color color-white
+              .fa-brands,.fa-solid
+                color color-second
+                font-size: font-l
+    .legal
+      width 100%
+      margin-top: 40px
+      display: flex
+      justify-content: space-between
+      flex-direction: column
+      @media escritorio-s
+        flex-direction: row
+
+      ul
+        justify-content: left
+        margin auto
+        width 100%
+        display: flex
+        gap 5px
+        flex-direction: column
+        margin-bottom: 20px
+        align-items: center
+        @media escritorio-s
+          gap 20px
+          margin-bottom: 20px
+          flex-direction: row
+        li 
+          list-style: none
+          @media movil
+            text-align: left
+          a
+            text-decoration: none
+            color color-first
+            font-size: font-xs
+      .banaky
+        width 100%
+        font-size: 12px
+        text-align: center
+        @media escritorio-s
+          width 150px
+          text-align: right
+        
+        

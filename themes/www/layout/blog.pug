@@ -1,0 +1,66 @@
+extends includes/layout
+
+block body-header
+  include includes/header
+
+block head-meta
+
+block head-title
+
+block body-main
+  //- Contenedor del blog
+  .blog 
+    .blogs
+      h1 Blog
+      //- Blog content - cards
+      .card-blog
+        a.image(href="#")
+          img(src="https://www.hiperoffice.es/wp-content/uploads/thumbnail_20190703_112001-800x450.jpg", alt="")
+        .info 
+          .fa-solid.fa-tags
+          a(href="#") tag 
+        .content
+          a(href="#").content-title Titulo
+          hr
+          a(href="#").content-text Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel fuga dolor quidem aperiam aspernatur dignissimos officiis voluptatibus suscipit nisi aliquam odit pariatur, cupiditate illum saepe, accusantium quam ducimus praesentium magni.
+      hr
+      .card-blog
+        a.image(href="#")
+          img(src="https://www.hiperoffice.es/wp-content/uploads/thumbnail_20190703_112001-800x450.jpg", alt="")
+        .info 
+          .fa-solid.fa-tags
+          a(href="#") tag 
+        .content
+          a(href="#").content-title Titulo
+          hr
+          a(href="#").content-text Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel fuga dolor quidem aperiam aspernatur dignissimos officiis voluptatibus suscipit nisi aliquam odit pariatur, cupiditate illum saepe, accusantium quam ducimus praesentium magni.
+      hr
+
+    .sidebar
+      .cat-tag
+        h3 Tags
+        ul 
+          li 
+            a(href="#")  Computer
+          li 
+            a(href="#")  Sistems 
+          li 
+            a(href="#")  Stationery blue
+          li 
+            a(href="#")  Web designer 
+            
+      .cat-tag
+        h3 Category
+        ul 
+          li 
+            a(href="#")  Computer
+          li 
+            a(href="#")  Sistems 
+          li 
+            a(href="#")  Stationery blue
+          li 
+            a(href="#")  Web designer 
+
+
+block body-footer
+  include includes/footer

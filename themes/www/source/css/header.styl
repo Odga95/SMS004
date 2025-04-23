@@ -1,0 +1,257 @@
+.header
+  width 100%
+  display: flex
+  justify-content: center
+  font-weight: 100
+  font-family: fontfamTitles
+  -webkit-box-shadow: 0px 0px 10px 0px #dadada; 
+  box-shadow: 0px 0px 10px 0px #7e7e7e;
+  position: relative
+  height: 10vh
+  font-weight: 500
+  z-index: 3
+  @media tablet
+    height: 15vh
+  @media escritorio-xs
+    overflow: hidden
+  @media escritorio-s
+    height: 20vh
+  @media screen and ( min-height: 920px ) { 
+    height: 10vh
+  }
+  .navigation //Navition bar
+    display: flex
+    flex-direction: row
+    max-width: 1280px
+    height: 100%
+    width 100%
+    margin auto
+    justify-content: space-between
+    z-index: 100
+    // @media escri
+    .logotype
+      justify-content: center
+      display: flex
+      align-items: center
+      width: auto
+      height: 100%
+      min-height: 60px
+      padding: 10px 15px 10px
+      @media escritorio-m
+        padding: 10px 50px 10px 30px
+      img
+        width: auto !important
+        height: 95%
+        // -webkit-box-shadow: 0px 0px 10px 0px #000000a8; 
+        // box-shadow: 0px 0px 10px 0px #000000a8;
+        
+        @media escritorio-s
+         height: 80%
+        @media escritorio-m
+          height: 80%
+        @media screen and ( min-height: 920px ) { 
+          height: 60%
+        }
+    .fa-bars
+      display: flex
+      justify-content: center
+      align-items: center
+      color: color-first
+      margin-left: auto
+      margin-right: 0
+      font-size: font-l
+      @media escritorio-xs
+        display none
+
+
+
+    .menu-line
+      width: 100%
+      background: color-footer
+      position: absolute
+      height: 100%
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%)
+      z-index: -1
+      border none
+      @media escritorio-xs
+        background: color-first
+        height: 60%
+        transform: translate(-10%,-50.5%)
+
+
+
+      
+    .menu
+      background: color-first
+      position absolute
+      top 10vh
+      left: 0
+      display: none
+      flex-direction: column
+      width: 100%
+      height: 100%
+      justify-content: left
+      @media tablet
+        top 14.7vh
+      @media escritorio-xs
+        position relative
+        height: 60%
+        margin auto
+        top 0px 
+        display: flex
+        flex-direction: row
+        justify-content: right
+      .menu-item,.subMenu-item
+        position: relative
+        width: auto
+        height: auto 
+        padding:15px
+        list-style: none
+        display: flex
+        align-items: center
+        justify-content: center
+        background: color-white
+        justify-content: left
+        @media escritorio-xs
+          position: relative
+          background: transparent
+          padding: 5px 15px
+          justify-content: center
+        .menu-item-link  
+          font-size: font-s
+          color color-letter
+          text-align: center
+          display: flex
+          gap 4px 
+          @media escritorio-xs
+            color color-white
+
+        .link
+          color color-letter
+          font-size: font-xs
+          @media escritorio-xs
+            color color-white
+            font-size: font-xs
+        .subMenu
+          // -webkit-box-shadow: 0px 10px 15px -6px #919191; 
+          // box-shadow: 0px 10px 15px -6px #919191;
+          margin-top: 15px
+          border-radius: 0px
+          background: white
+          position: relative
+          overflow: hidden
+          display: none
+
+          @media tablet
+            position: relative
+          @media escritorio-s
+            position: relative
+          @media escritorio-xs
+            border-radius: 0px 0px 15px 15px;
+            position: absolute
+            left: 0
+            top: 0
+          @media screen and ( min-height: 920px ) 
+            margin-top: 8.4vh
+          // @media escritorio-xs
+          
+          //Scale 
+          transform-origin top center
+          transform: scale(1,0);
+          transition: 0.2s
+          z-index 10
+          .subMenu-item
+            width: 100%
+            height: 100%
+            transition: 0.2s
+            padding: 10px 30px
+            .subMenu-item-link
+              display: flex 
+              align-items: center
+              width: 100%
+              white-space: nowrap;
+              font-size: font-xs
+          .subMenu-item:hover
+            background: color-first
+            .subMenu-item-link
+              color color-white
+      .menu-item-subMenu:hover
+        background: color-first
+        color color-white
+        padding: 15px 0px 0px
+        .menu-item-link 
+          color color-white
+        .link,.menu-item-link,.fa-solid
+          color color-white
+        @media escritorio-xs
+          padding: 0px
+          background: transparent
+          color color-white
+          .menu-item-link 
+            color color-white
+          .fa-solid
+            color color-white 
+        .subMenu
+          display block
+          transform: scale(1);
+          .subMenu-item
+            height: fit-content
+      .menu-item-subMenu
+        padding: 15px 0px
+        display: block
+        flex-direction: row
+        justify-content: left
+        align-items: center
+        gap 5px
+        color color-white 
+        width: 100%
+        .link
+          margin-left 15px !important
+        @media escritorio-xs
+          width: fit-content
+          display: flex
+          justify-content: center
+        .fa-solid
+          margin-left: 4px
+          margin-top 2.5px
+          font-size: 12px
+          color color-letter
+          @media escritorio-xs
+            color color-white
+
+    .account
+      background: color-transparent
+      margin auto
+      margin-right: 10px
+      margin-left: 10px
+      height: 60%
+      padding: 5px 15px
+      width: fit-content
+      display: flex
+      justify-content: center
+      @media movil
+        margin-right: 20px
+        margin-left: 20px
+      @media escritorio-xs
+        margin auto
+        background: color-first
+      .account-signup
+        width: fit-content
+        height: fit-content
+        background: color-second
+        border-radius: 4px
+        padding: 5px 15px
+        color color-white
+        margin: auto
+        font-weight: 500
+        p
+          display: none
+          @media escritorio-m
+            display: flex
+        .fa-user
+          display: flex
+          font-size: font-m
+          @media escritorio-m
+            display: none
